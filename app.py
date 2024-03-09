@@ -9,11 +9,16 @@ def subtract(num1, num2) -> float:
     return num1 - num2
 
 
+def multiply(num1, num2) -> float:
+    return num1 * num2
+
+
 def main():
-    print('In order to add, enter "add", in order to subtract, enter "subtract"')
+    print('In order to add, enter "add", in order to subtract, enter "subtract", \
+          in order to multiply, enter "multiply"')
     input_operation = input('Enter the operation: ')
 
-    if input_operation not in ['add', 'subtract']:
+    if input_operation not in ['add', 'subtract', 'multiply']:
         print('Invalid operation, follow the instructions')
         return
 
@@ -26,6 +31,10 @@ def main():
 
     if input_operation == 'subtract':
         results = subtract(num1, num2)
+        print(f'The result: {results}')
+
+    if input_operation == 'multiply':
+        results = multiply(num1, num2)
         print(f'The result: {results}')
 
 

@@ -12,13 +12,16 @@ def subtract(num1, num2) -> float:
 def multiply(num1, num2) -> float:
     return num1 * num2
 
+def divide(num1, num2) -> float:
+    return num1 / num2
+
 
 def main():
     print('In order to add, enter "add", in order to subtract, enter "subtract", \
-          in order to multiply, enter "multiply"')
+          in order to multiply, enter "multiply", in order to divide, enter "divide"')
     input_operation = input('Enter the operation: ')
 
-    if input_operation not in ['add', 'subtract', 'multiply']:
+    if input_operation not in ['add', 'subtract', 'multiply', 'divide']:
         print('Invalid operation, follow the instructions')
         return
 
@@ -36,6 +39,10 @@ def main():
     if input_operation == 'multiply':
         results = multiply(num1, num2)
         print(f'The result: {results}')
+
+    if input_operation == 'divide':
+        results = divide(num1, num2)
+        print(f'The result of division: {results}')
 
 
 if __name__ == "__main__":
